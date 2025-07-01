@@ -71,3 +71,10 @@ def test_delete_user(client):
     response = client.delete_user(user_id=2)
     assert response.status_code == 204
     assert response.text == ""
+
+
+def test_get_user_unknown(client):
+    response = client.get_user(user_id=30)
+    assert response.status_code == 404
+    get_user_data = response.json()
+    assert get_user_data == {}
