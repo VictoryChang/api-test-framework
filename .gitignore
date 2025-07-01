@@ -1,2 +1,6 @@
 __pycache__
-venv
+.pytest_cache/
+.vs_code/
+assets/
+report.html
+venv/

@@ -27,7 +27,7 @@
             "last_name": {
                 "type": "string",
                 "description": "The user's last name"
-            },
+            }
         },
         "required": ["avatar", "email", "first_name", "id"]
     }
