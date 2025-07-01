@@ -10,7 +10,7 @@ def pytest_html_report_title(report):
 
 
 def load_schema(path: str) -> dict:
-    with open("schemas/user.json") as reader:
+    with open(path) as reader:
         return json.loads(reader.read())    
 
 

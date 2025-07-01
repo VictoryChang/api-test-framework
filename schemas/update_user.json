@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Update User",
+  "description": "Update User Response",
+  "type": "object",
+  "properties": {
+    "name": {
+        "type": "string",
+        "description": "The user's name"
+    },
+    "job": {
+        "type": "string",
+        "description": "The user's job"
+    },
+    "updatedAt": {
+        "type": "string",
+        "description": "Updated timestamp"
+    }
+  },
+  "required": ["name", "job", "updatedAt"]
+}
