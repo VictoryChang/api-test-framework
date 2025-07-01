@@ -26,4 +26,5 @@ referencing==0.36.2
 requests==2.32.4
 requests-toolbelt==1.0.0
 rpds-py==0.26.0
+ruff==0.12.1
 urllib3==2.5.0

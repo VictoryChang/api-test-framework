@@ -11,13 +11,13 @@ class ReqResClient:
 
     def get_user(self, user_id: int) -> Response:
         return self.session.get(f"/api/users/{user_id}")
-    
+
     def list_users(self, page: int) -> Response:
         return self.session.get("/api/users", params={"page": page})
-    
+
     def create_user(self, payload: dict) -> Response:
         return self.session.post("/api/users", json=payload)
-    
+
     def update_user(self, user_id: int, payload: dict) -> Response:
         return self.session.put(f"/api/users/{user_id}", json=payload)
 

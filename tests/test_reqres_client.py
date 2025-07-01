@@ -1,4 +1,3 @@
-from icecream import ic
 import jsonschema
 
 from tests.conftest import load_schema
@@ -37,7 +36,7 @@ def test_list_user(client):
         "email": "michael.lawson@reqres.in",
         "first_name": "Michael",
         "last_name": "Lawson",
-        "avatar": "https://reqres.in/img/faces/7-image.jpg"
+        "avatar": "https://reqres.in/img/faces/7-image.jpg",
     }
 
 
@@ -63,7 +62,7 @@ def test_update_user(client):
 
     update_user_schema = load_schema("schemas/update_user.json")
     jsonschema.validate(update_user_data, update_user_schema)
-    
+
     assert update_user_data["name"] == payload["name"]
     assert update_user_data["job"] == payload["job"]
 
@@ -71,4 +70,4 @@ def test_update_user(client):
 def test_delete_user(client):
     response = client.delete_user(user_id=2)
     assert response.status_code == 204
-    assert response.text == ''
+    assert response.text == ""
