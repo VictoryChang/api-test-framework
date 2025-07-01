@@ -1,0 +1,19 @@
+import json
+
+import pytest
+
+from clients import ReqResClient
+
+
+def pytest_html_report_title(report):
+    report.title = 'API'
+
+
+def load_schema(path: str) -> dict:
+    with open("schemas/user.json") as reader:
+        return json.loads(reader.read())    
+
+
+@pytest.fixture(scope="session")
+def client():
+    return ReqResClient()

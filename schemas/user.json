@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "User",
+  "description": "A user in the system",
+  "type": "object",
+  "properties": {
+    "data": {
+        "type": "object",
+        "properties": {
+            "avatar": {
+                "type": "string",
+                "description": "The user's avatar"
+            },
+            "email": {
+                "type": "string",
+                "description": "The user's email address"
+            },
+            "first_name": {
+                "type": "string",
+                "description": "The user's first name"
+            },
+            "id": {
+                "type": "integer",
+                "description": "The unique identifier for a user"
+            },
+            "last_name": {
+                "type": "string",
+                "description": "The user's last name"
+            },
+        },
+        "required": ["avatar", "email", "first_name", "id"]
+    }
+  },
+  "required": ["data"]
+}
